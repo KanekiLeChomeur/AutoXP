@@ -4,7 +4,7 @@
 
 | HitCount | License | Poggit | Release |
 |:--:|:--:|:--:|:--:|
-|[![HitCount](http://hits.dwyl.io/JackMD/AutoXP.svg)](http://hits.dwyl.io/JackMD/AutoXP)|[![GitHub license](https://img.shields.io/github/license/JackMD/AutoXP.svg)](https://github.com/JackMD/AutoXP/blob/master/LICENSE)|[![Poggit-CI](https://poggit.pmmp.io/ci.shield/JackMD/AutoXP/AutoXP)](https://poggit.pmmp.io/ci/JackMD/AutoXP/AutoXP)|[![](https://poggit.pmmp.io/shield.state/AutoXP)](https://poggit.pmmp.io/p/AutoXP)|
+|[![HitCount](http://hits.dwyl.io/JackMD/AutoXP.svg)](http://hits.dwyl.io/JackMD/AutoXP)|[![GitHub license](https://img.shields.io/github/license/JackMD/AutoXP.svg)](https://github.com/JackMD/AutoXP/blob/master/LICENSE)|[![Poggit-CI](https://poggit.pmmp.io/ci.shield/KanekiLeChomeur/AutoXP/AutoXP)](https://poggit.pmmp.io/ci/KanekiLeChomeur/AutoXP/AutoXP)|[![](https://poggit.pmmp.io/shield.state/AutoXP)](https://poggit.pmmp.io/p/AutoXP)|
 
 ### A AutoXP plugin for PocketMine-MP
 ### Features:
