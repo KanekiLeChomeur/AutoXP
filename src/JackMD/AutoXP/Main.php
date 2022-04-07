@@ -29,18 +29,19 @@
 
 namespace JackMD\AutoXP;
 
+use pocketmine\entity\ExperienceManager;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerDeathEvent;
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 
 class Main extends PluginBase implements Listener {
 
 	public function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents(($this), $this);
-		$this->getLogger()->info("Plugin Enabled.");
+		$this->getLogger()->info("[AutoXP] Plugin Enabled.");
 	}
 
 	/**
@@ -51,7 +52,8 @@ class Main extends PluginBase implements Listener {
 		if ($event->isCancelled()) {
 			return;
 		}
-		$event->getPlayer()->addXp($event->getXpDropAmount());
+                $expmanager = new ExperienceManager($event->getPlayer());
+		$expmanager->addXp($event->getXpDropAmount());
 		$event->setXpDropAmount(0);
 	}
 
@@ -66,7 +68,8 @@ class Main extends PluginBase implements Listener {
 		if ($cause instanceof EntityDamageByEntityEvent) {
 			$damager = $cause->getDamager();
 			if ($damager instanceof Player) {
-				$damager->addXp($player->getXpDropAmount());
+                                $expmanager = new ExperienceManager($damager);
+				$expmanager->addXp($player->getXpDropAmount());
 				$player->setCurrentTotalXp(0);
 			}
 		}
