@@ -8,9 +8,15 @@
  * | | | | |_| | || (_) / /^\ \| |
  * \_| |_/\__,_|\__\___/\/   \/\_|
  *
- * Discord: JackMD#3717
- * Twitter: JackMTaylor_
+ * Creator:
+ *   Discord: JackMD#3717
+ *   Twitter: JackMTaylor_
  *
+ * Updated by:
+ *   Discord:
+ *      Tag: Kaneki Le Chomeur#2833
+ *      Id: 568874566869581835
+ * 
  * This software is distributed under "GNU General Public License v3.0".
  * This license allows you to use it and/or modify it but you are not at
  * all allowed to sell this plugin at any cost. If found doing so the
@@ -52,7 +58,7 @@ class Main extends PluginBase implements Listener {
 		if ($event->isCancelled()) {
 			return;
 		}
-                $expmanager = new ExperienceManager($event->getPlayer());
+        	$expmanager = new ExperienceManager($event->getPlayer());
 		$expmanager->addXp($event->getXpDropAmount());
 		$event->setXpDropAmount(0);
 	}
@@ -68,7 +74,7 @@ class Main extends PluginBase implements Listener {
 		if ($cause instanceof EntityDamageByEntityEvent) {
 			$damager = $cause->getDamager();
 			if ($damager instanceof Player) {
-                                $expmanager = new ExperienceManager($damager);
+                	$expmanager = new ExperienceManager($damager);
 				$expmanager->addXp($player->getXpDropAmount());
 				$player->setCurrentTotalXp(0);
 			}
